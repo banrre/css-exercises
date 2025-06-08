@@ -8,12 +8,18 @@ body {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar {
@@ -34,35 +40,42 @@ body {
 }
 
 .header {
-  font-weight: 900px;
-  font-size: 32px;
   display: flex;
   align-items: center;
+  font-size: 32px;
+  font-weight: 900px;
+  padding: 0 16px;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  /* justify-content: space-between;
+  align-items: stretch; */
   flex-grow: 1;
 }
 
 .sidebar {
-  display: flex;
+  /* display: flex; */
   flex-shrink: 0;
-  width: 300px;
+  /* width: 300px; */
   padding: 16px;
+  /* flex-direction: column; */
 }
 
 .wrap {
+  /* padding: 48px; */
   display: flex;
   flex-wrap: wrap;
+  /* I added this two after two, three weeks since I work on this */
+  margin: 20px;
+  gap: 32px;
 }
 
 .card {
-  flex: 1;
-  padding: 48px;
-  
+  /* flex: 1;*/
+   padding: 16px;
+  width: 300px;
+  /* height: 300px; */
 }
 
 ul, 
@@ -71,4 +84,11 @@ a {
   list-style-type: none;
   color: white;
   font-size: 24px;
+}
+
+/* Este me faltó y es emuy importante, hizo que todo se ajustara 
+según el tamaño de la página. Es la caja principal */
+body {
+  display: flex;
+  flex-direction: column;
 }
